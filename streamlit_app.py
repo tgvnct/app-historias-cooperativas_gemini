@@ -45,7 +45,7 @@ def gerar_historia(autor: str) -> str:
     return texto
 
 # ─── INTERFACE STREAMLIT ────────────────────────────────────────
-st.title("✍️ Histórias cooperativas – autores clássicos do Brasil")
+st.title("✍️ Histórias cooperativas – escreva com autores clássicos do Brasil")
 
 autor = st.selectbox("Escolha o autor:", AUTORES)
 
