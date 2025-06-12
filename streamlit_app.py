@@ -30,7 +30,7 @@ def gerar_historia(autor: str) -> str:
         f"imitando o estilo de {autor}. "
         f"Inclua **pelo menos um personagem marcante** criado por {autor}. "
         f"Finalize com um gancho que convide o leitor a concluir a narrativa."
-        f"Apresente todo o texto em língua portuguesa, nenhuma palavra em outro idioma" 
+        f"Traduza todo o texto em língua portuguesa, nenhuma palavra em outro idioma deve ser apresentada" 
         f"No início apresente uma pequena explicação sobre o estilo de {autor}"
     )
     rsp = co.chat(
