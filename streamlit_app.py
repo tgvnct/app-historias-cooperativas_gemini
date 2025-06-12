@@ -25,13 +25,10 @@ co = cohere.Client(API_KEY)
 # ─── FUNÇÃO QUE GERA A HISTÓRIA ─────────────────────────────────
 def gerar_historia(autor: str) -> str:
     prompt = (
-        f"(chave:{random.choice(CHAVES)}) "
-        f"Escreva **três parágrafos** de uma história inédita em português, "
-        f"imitando o estilo de {autor}. "
-        f"Inclua **pelo menos um personagem marcante** criado por {autor}. "
-        f"Finalize com um gancho que convide o leitor a concluir a narrativa."
-        f"Traduza todo o texto em língua portuguesa, nenhuma palavra em outro idioma deve ser apresentada" 
-        f"No início apresente uma pequena explicação sobre o estilo de {autor}"
+        f"Você é um autor brasileiro famoso chamado {autor}. "
+        f"Escreva três parágrafos de uma história curta, com personagens icônicos do estilo de {autor}. "
+        "Use português do Brasil, linguagem literária e termine com um gancho para o leitor concluir. "
+        "Não adicione títulos nem numere os parágrafos."
     )
     rsp = co.chat(
         model="command-r",
