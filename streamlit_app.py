@@ -29,8 +29,8 @@ def gerar_historia(autor: str) -> str:
         f"Escreva **três parágrafos** de uma história inédita em português, "
         f"imitando o estilo de {autor}. "
         f"Inclua **pelo menos um personagem marcante** criado por {autor}. "
-        "Finalize com um gancho que convide o leitor a concluir a narrativa."
-        "Apresente todo o texto em língua portuguesa, no início apresente uma pequena explicação sobre o estilo de {autor}"
+        f"Finalize com um gancho que convide o leitor a concluir a narrativa."
+        f"Apresente todo o texto em língua portuguesa, nenhuma palavra em outro idioma" no início apresente uma pequena explicação sobre o estilo de {autor}"
     )
     rsp = co.chat(
         model="command-r",
