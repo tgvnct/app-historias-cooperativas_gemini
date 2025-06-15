@@ -51,10 +51,9 @@ def gerar_historia(autor: str) -> str:
     
     prompt = (
         f"Aja como se você fosse o autor brasileiro {autor}. "
-        f"Escreva o início de uma história, em três parágrafos, no estilo inconfundível de {autor}, usando seu vocabulário, ritmo e temas característicos."
-        f"A história deve ter um personagem dos livros de {autor}."
-        "A história deve ser em português do Brasil e terminar com um 'gancho' que convide o leitor a continuar a narrativa. "
-        "Não adicione títulos ou numeração aos parágrafos."
+        f"Escreva o início de uma história simples, em três parágrafos, no estilo inconfundível de {autor}, usando seu vocabulário, ritmo e temas característicos."
+        f"A história deve ter um personagem dos livros de {autor}, deve ter um título, um começo e um meio, o desfecho será dado por uma aluno do ensino médio."
+        "A história deve ser em português do Brasil, o terceiro parágrafo deve terminar com um 'gancho' que convide o leitor a concluir a narrativa. "
     )
     
 # Geramos o conteúdo
