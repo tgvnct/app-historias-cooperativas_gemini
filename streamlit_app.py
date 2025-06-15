@@ -17,7 +17,7 @@ AUTORES = [
     "Rachel de Queiroz",
     "Lygia Fagundes Telles",
     "Itamar Vieira Junior",
-    "João Simões Lopes Neto",
+    "Érico Veríssimo",
 ]
 
 # --- FUNÇÕES ---
