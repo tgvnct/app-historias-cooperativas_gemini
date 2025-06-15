@@ -51,12 +51,14 @@ def gerar_historia(autor: str) -> str:
     
     prompt = (
         f"Aja como se você fosse o autor brasileiro {autor}. "
-        f"Escreva o início de uma história, em três parágrafos, no estilo inconfundível de {autor}, usando seu vocabulário, ritmo e temas característicos. "
-        "A história deve ser em português do Brasil e terminar com uma frase de suspense, um 'gancho' que convide o leitor a continuar a narrativa. "
+        f"Escreva o início de uma história, em três parágrafos, no estilo inconfundível de {autor}, usando seu vocabulário, ritmo e temas característicos."
+        f"A história deve ter um personagem dos livros de {autor}."
+        "A história deve ser em português do Brasil e terminar com um 'gancho' que convide o leitor a continuar a narrativa. "
         "Não adicione títulos ou numeração aos parágrafos."
     )
     
-    # Geramos o conteúdo
+# Geramos o conteúdo
+    
     response = model.generate_content(prompt)
     
     # Limpamos o texto (se necessário)
