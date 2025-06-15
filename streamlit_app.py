@@ -1,4 +1,4 @@
-# streamlit_app.py - VERSÃO PARA GOOGLE GEMINI
+# streamlit_app.py - VERSÃO PARA GOOGLE GEMINI - 14/6/2025
 
 import streamlit as st
 import google.generativeai as genai
@@ -16,6 +16,8 @@ AUTORES = [
     "Jorge Amado",
     "Rachel de Queiroz",
     "Lygia Fagundes Telles",
+    "Itamar Vieira Junior",
+    "João Simões Lopes Neto",
 ]
 
 # --- FUNÇÕES ---
@@ -34,14 +36,15 @@ def connect_to_gsheet():
         st.error(f"Erro ao conectar com o Google Sheets: {e}")
         return None
 
-# MUDANÇA: Configuração da API do Google Gemini
+# Configuração da API do Google Gemini
 if "GOOGLE_API_KEY" in st.secrets:
     genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 else:
     st.error("⚠️ Configure GOOGLE_API_KEY nos Secrets do Streamlit.")
     st.stop()
 
-# MUDANÇA: Função para gerar história usando o Gemini
+# Função para gerar história usando o Gemini
+
 def gerar_historia(autor: str) -> str:
     # Selecionamos o modelo do Gemini
     model = genai.GenerativeModel('models/gemini-1.5-flash-latest')
@@ -62,8 +65,9 @@ def gerar_historia(autor: str) -> str:
     texto = re.sub(r'Parágrafo\s*\d+\s*:\s*', '', texto, flags=re.I)
     return texto
 
-# --- INTERFACE E LÓGICA PRINCIPAL (praticamente a mesma) ---
-st.title("✍️ Histórias cooperativas")
+# --- INTERFACE E LÓGICA PRINCIPAL 
+
+st.title("✍️ Histórias cooperativas - escreva com grandes nomes da literatura brasileira")
 
 # Inicializa as variáveis de estado da sessão
 if 'historia_gerada' not in st.session_state:
