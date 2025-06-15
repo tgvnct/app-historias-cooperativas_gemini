@@ -44,7 +44,7 @@ else:
 # MUDANÇA: Função para gerar história usando o Gemini
 def gerar_historia(autor: str) -> str:
     # Selecionamos o modelo do Gemini
-    model = genai.GenerativeModel('gemini-1.0-pro-latest')
+    model = genai.GenerativeModel('gemini-pro')
     
     prompt = (
         f"Aja como se você fosse o autor brasileiro {autor}. "
